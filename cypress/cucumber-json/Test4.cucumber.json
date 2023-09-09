@@ -1,0 +1,157 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Order phonefrom ecommerce site",
+    "line": 1,
+    "id": "order-phonefrom-ecommerce-site",
+    "tags": [],
+    "uri": "Test4.feature",
+    "elements": [
+      {
+        "id": "order-phonefrom-ecommerce-site;place-the-order-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Place the order successfully",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the site",
+            "result": {
+              "status": "passed",
+              "duration": 1535000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Click the shop and Add the items to the cart",
+            "result": {
+              "status": "failed",
+              "duration": 674000000,
+              "error_message": "TypeError: cy.selectProduct is not a function\n    at eval (cypress/e2e/cucumber/team/step_definitions/check/OrderStepDef.js:18:15)\n    at Context.eval (cypress/e2e/cucumber/team/step_definitions/check/OrderStepDef.js:17:28)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "Validate the Prices",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Select the country for delivery",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Verfiy the sucessfuly place the Order",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-phonefrom-ecommerce-site;filling-the-form-to-shop",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Filling the form to Shop",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I open the site",
+            "result": {
+              "status": "passed",
+              "duration": 526000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "Sex"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sanmita",
+                      "Female"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I Fill the form details",
+            "result": {
+              "status": "passed",
+              "duration": 493000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Sanmita"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Validate the forms behaviour",
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Select the Shop Page",
+            "result": {
+              "status": "passed",
+              "duration": 1004000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

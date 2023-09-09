@@ -1,0 +1,22 @@
+version: 2.1
+# Uses the official Cypress Orb
+# https://circleci.com/developer/orbs/orb/cypress-io/cypress
+orbs:
+  cypress: cypress-io/cypress@3
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
+          # in CircleCI → Project Settings → Environment Variables
+          # Records in parallel to Cypress Cloud
+          # https://docs.cypress.io/guides/guides/parallelization
+          parallelism:3 # Uses 2 parallel instances
+          # Starts web server for E2E tests - replace with your own server invocation
+          # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
+          start-command: yarn start
+          cypress-command: yarn cypress run --browser chrome split=true
+          install-browsers: true
+          post-steps:
+            - store_artifacts:
+               path: cypress/reports/mochareports/report.html
